@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Entrar</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f0f0f0;
+		}
+        img{
+            width: 60%;
+        }
+        label{
+            color: rgb(0, 0, 0);
+        }
+		.container {
+			width: 300px;
+			margin: 50px auto;
+			background-color: #ffffff;
+			padding: 20px;
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+		}
+		.title {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		.input-group {
+			margin-bottom: 10px;
+		}
+		.input-group label {
+			display: block;
+			margin-bottom: 5px;
+		}
+		.input-group input {
+			width: 92%;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+		.input-group button {
+			width: 100%;
+			padding: 10px;
+			background-color: #004AAD;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		.input-group button:hover {
+			background-color: #002350;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="title">
+            <img src="Radiohead_-_Pablo_Honey.jpg" alt="pablo honey">
+		</div>
+		<form>
+			<div class="input-group">
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email">
+			</div>
+			<div class="input-group">
+				<label for="password">Senha:</label>
+				<input type="password" id="password" name="password">
+			</div>
+			<div class="input-group">
+				<button type="submit">Entrar</button>
+			</div>
+			<div class="input-group">
+				<a href="#">Esqueci a senha</a>
+			</div>
+			<div class="input-group">
+				<a href="cadastro.html">cadastre-se</a>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
