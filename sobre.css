@@ -4,25 +4,26 @@
     box-sizing: border-box;
 }
 
-
 body {
+    width: 100%;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    text-align: center;
 }
 
 header {
     background-color: #004AAD;
     color: #fff;
-    padding: 20px;
-    text-align: center;
+    padding: 1%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
-    margin: 0;
+    margin: 1px;
 }
 
 nav ul {
@@ -57,14 +58,32 @@ footer {
     padding: 20px;
     background-color: #004AAD;
     color: #fff;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
 }
+.ii{
+    width: 40px;
+}
+
+img{
+width: auto;
+}
+
 
 /*Classe pra justificar*/
 .justify{
     display: flex;
-    justify-content: space-around;
 }
 
 div p{
     padding: 1%;
+}
+
+.adjustsize{
+   width: 10%;
+}
+
+.perfil{
+    width: 5%;
 }
