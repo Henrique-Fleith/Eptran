@@ -57,3 +57,7 @@ footer{
     color: white;
     background-color: #023859;
 }
+
+.invisible{
+    display: none;
+}
