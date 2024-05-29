@@ -30,9 +30,17 @@ header img{
     height: 30px;
 }
 
+nav{
+    margin-top: 50px;
+    position: fixed;
+    background-color: #023859;
+    height:100%;
+    width: 50px;
+}
 
 main{
     margin-top: 50px;
+    margin-left: 50px;
     margin-bottom: 50px;
     height: 100%;
 }
