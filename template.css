@@ -35,14 +35,17 @@ nav{
     position: fixed;
     background-color: #023859;
     height:100%;
-    width: 50px;
+    width: 10px;
 }
 
 main{
     margin-top: 50px;
-    margin-left: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
     margin-bottom: 50px;
     height: 100%;
+
+    text-align: center;
 }
 
 
