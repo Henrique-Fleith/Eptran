@@ -31,7 +31,7 @@ CREATE TABLE Certificação (
     FOREIGN KEY (user_id) REFERENCES Usuario(user_id)
 );
 
-CREATE TABLE Ação (
+CREATE TABLE Acao (
     acao_id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
     descricao TEXT,
