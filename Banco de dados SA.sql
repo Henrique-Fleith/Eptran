@@ -7,7 +7,7 @@ CREATE TABLE Usuario (
     nome VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE, -- Garantir emails únicos
     senha VARCHAR(255) NOT NULL,
-    registro DATE NOT NULL DEFAULT CURRENT_DATE, -- Definir data atual como padrão
+    registro DATE NOT NULL, 
     tipo_escolaridade VARCHAR(50),
     genero VARCHAR(20),
     data_nascimento DATE,
@@ -31,9 +31,10 @@ CREATE TABLE Certificacao (
     descricao TEXT,
     criterios TEXT,
     data_emissao DATE NOT NULL,
-    data_expiracao DATE NOT NULL CHECK (data_expiracao > data_emissao), -- Garantir que a data de expiração seja posterior à data de emissão
+    data_expiracao DATE NOT NULL,
     user_id INT,
-    FOREIGN KEY (user_id) REFERENCES Usuario(user_id) ON DELETE SET NULL ON UPDATE CASCADE
+    FOREIGN KEY (user_id) REFERENCES Usuario(user_id) ON DELETE SET NULL ON UPDATE CASCADE,
+    CHECK (data_expiracao > data_emissao) -- Garantir que a data de expiração seja posterior à data de emissão
 );
 
 CREATE INDEX idx_nome_certificacao ON Certificacao (nome);
@@ -51,6 +52,4 @@ CREATE TABLE Acao (
 );
 
 CREATE INDEX idx_nome_acao ON Acao (nome);
-
-
 
