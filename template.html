@@ -3,32 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="template.css"> 
     <title> Eptran </title>
 </head>
 
 <body>
     
     <header>
-
+        <img src="img/Menu_icon_icon-icons.com_71858.png" alt="menu" class="barra" id="Barra">     
         <img src="img/logo.png" alt="logo eptran" class="logo">
-        <img src="img/lologo.png" alt="foto de perfil" class="pfp">
+        <a href="login.html">
+        <img src="img/lologo.png" alt="foto de perfil" class="pfp"></a>
 
     </header>
 
-    <nav></nav>
+    <nav class="bar nav" id="Bar">
+        <img src="/img/Radiohead_-_Pablo_Honey.jpg" alt="" style="width: 90%; margin-left: 4%;" class="pablofudido">
+
+    </nav>
 
     <main>
         
         <h1>Home</h1>
 
     </main>
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <footer> 
 
-        <p> Eptran </p>
+        <p> Eptran© </p>
     </footer>
 
+<script>
+        const barra = document.querySelector('#Barra');
+    const bar = document.querySelector('#Bar');
 
+    barra.addEventListener('click', () => {
+      bar.classList.toggle('ativo');
+    });
+</script>
 </body>
 </html>

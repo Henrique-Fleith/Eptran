@@ -30,14 +30,6 @@ header img{
     height: 30px;
 }
 
-nav{
-    margin-top: 50px;
-    position: fixed;
-    background-color: #023859;
-    height:100%;
-    width: 10px;
-}
-
 main{
     margin-top: 50px;
     margin-left: 10px;
@@ -56,4 +48,29 @@ footer{
     text-align: center;
     color: white;
     background-color: #023859;
+}
+
+nav{
+    margin-top: 50px;
+    position: fixed;
+    background-color: #023859;
+    height:100%;
+    width: 0px;
+    transition: all 0.5s ease;
+}
+
+@media (max-width: 800px){
+
+    .ativo{
+        width: 80%;
+        transition: all 0.5s ease;
+        
+    }
+}
+
+@media (min-width: 800px){
+    .ativo{
+        width: 20%;
+        transition: all 0.5s ease;
+    }
 }
