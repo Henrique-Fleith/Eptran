@@ -1,8 +1,8 @@
-CREATE DATABASE MeuBancoDeDados;
+CREATE DATABASE meubancodedados;
 
-USE MeuBancoDeDados;
+USE meubancodedados;
 
-CREATE TABLE Usuario (
+CREATE TABLE usuario (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE, -- Garantir emails únicos
@@ -14,18 +14,18 @@ CREATE TABLE Usuario (
     CHECK (LENGTH(senha) >= 8) -- Garantir que a senha tenha pelo menos 8 caracteres
 );
 
-CREATE INDEX idx_nome_usuario ON Usuario (nome);
+CREATE INDEX idx_nome_usuario ON usuario (nome);
 
-CREATE TABLE Atividade (
+CREATE TABLE atividade (
     atividade_id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
     descricao TEXT,
     tipo_atividade VARCHAR(50) NOT NULL
 );
 
-CREATE INDEX idx_nome_atividade ON Atividade (nome);
+CREATE INDEX idx_nome_atividade ON atividade (nome);
 
-CREATE TABLE Certificacao (
+CREATE TABLE certificacao (
     certificado_id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
     descricao TEXT,
@@ -33,13 +33,13 @@ CREATE TABLE Certificacao (
     data_emissao DATE NOT NULL,
     data_expiracao DATE NOT NULL,
     user_id INT,
-    FOREIGN KEY (user_id) REFERENCES Usuario(user_id) ON DELETE SET NULL ON UPDATE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES usuario(user_id) ON DELETE SET NULL ON UPDATE CASCADE,
     CHECK (data_expiracao > data_emissao) -- Garantir que a data de expiração seja posterior à data de emissão
 );
 
-CREATE INDEX idx_nome_certificacao ON Certificacao (nome);
+CREATE INDEX idx_nome_certificacao ON certificacao (nome);
 
-CREATE TABLE Acao (
+CREATE TABLE acao (
     acao_id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
     descricao TEXT,
@@ -47,9 +47,8 @@ CREATE TABLE Acao (
     pontuacao INT NOT NULL CHECK (pontuacao >= 0), -- Garantir que a pontuação seja não negativa
     atividade_id INT,
     user_id INT,
-    FOREIGN KEY (atividade_id) REFERENCES Atividade(atividade_id) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (user_id) REFERENCES Usuario(user_id) ON DELETE SET NULL ON UPDATE CASCADE
+    FOREIGN KEY (atividade_id) REFERENCES atividade(atividade_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES usuario(user_id) ON DELETE SET NULL ON UPDATE CASCADE
 );
 
-CREATE INDEX idx_nome_acao ON Acao (nome);
-
+CREATE INDEX idx_nome_acao ON acao (nome);
