@@ -59,6 +59,20 @@ nav{
     transition: all 0.5s ease;
 }
 
+/*Botao de Sair */ 
+.butao{
+    width: 100px;
+    align-self: flex-end;
+    margin-top:45px;
+    position: fixed;
+}
+
+.invisible{
+    display: none;
+}
+
+
+/*Portabilidade Mobile */
 @media (max-width: 800px){
 
     .ativo{
