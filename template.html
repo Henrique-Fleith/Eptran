@@ -9,45 +9,44 @@
 </head>
 
 <body>
-    
     <header>
         <img src="img/Menu_icon_icon-icons.com_71858.png" alt="menu" class="barra" id="Barra">     
         <img src="img/Logo.png" alt="logo eptran" class="logo">
-        
         <img src="img/lologo.png" alt="foto de perfil" class="pfp" onclick="BotaoSair()">
-        
     </header>
+    
     <a href="html/login.html" class="butao invisible">
-        <button href="html/login.html" > Sair da Conta</button>
+        <button href="html/login.html">Sair da Conta</button>
     </a>
 
     <nav class="bar nav" id="Bar">
         <img src="img/Radiohead_-_Pablo_Honey.jpg" alt="" style="width: 90%; margin-left: 4%;" class="pablofudido">
-
     </nav>
 
     <main>
-        
         <h1>Home</h1>
-
+        <button onclick="alternarTema()">Alterar Tema</button>
     </main>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <footer> 
 
-        <p> Eptran© </p>
+    <footer> 
+        <p>Eptran©</p>
     </footer>
 
-<script>
-    const barra = document.querySelector('#Barra');
-    const bar = document.querySelector('#Bar');
+    <script>
+        const barra = document.querySelector('#Barra');
+        const bar = document.querySelector('#Bar');
+    
+        barra.addEventListener('click', () => {
+          bar.classList.toggle('ativo');
+        });
+    
+        function BotaoSair() {
+            document.querySelector(".butao").classList.toggle("invisible");
+        }
 
-    barra.addEventListener('click', () => {
-      bar.classList.toggle('ativo');
-    });
-
-    function BotaoSair() {
-        document.querySelector(".butao").classList.toggle("invisible");
-    }
-</script>
+        function alternarTema() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
 </body>
 </html>
