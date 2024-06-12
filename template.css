@@ -77,6 +77,8 @@ nav {
 }
 
 .invisible {
+    width: 0px;
+    transition: all 0.5s ease;
     display: none;
 }
 

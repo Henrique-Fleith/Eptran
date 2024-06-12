@@ -21,11 +21,12 @@
 
     <nav class="bar nav" id="Bar">
         <img src="img/Radiohead_-_Pablo_Honey.jpg" alt="" style="width: 90%; margin-left: 4%;" class="pablofudido">
+        <button onclick="alternarTema()" style="width: 90%; margin-left: 4%;" class="nav-item">Alterar Tema</button>
     </nav>
 
     <main>
         <h1>Home</h1>
-        <button onclick="alternarTema()">Alterar Tema</button>
+        
     </main>
 
     <footer> 
@@ -35,9 +36,12 @@
     <script>
         const barra = document.querySelector('#Barra');
         const bar = document.querySelector('#Bar');
-    
+
+        document.querySelector(".nav-item").classList.toggle("invisible");
+
         barra.addEventListener('click', () => {
           bar.classList.toggle('ativo');
+          document.querySelector(".nav-item").classList.toggle("invisible");
         });
     
         function BotaoSair() {
