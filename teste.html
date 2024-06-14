@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>SideBar Menu Demo</title>
+
+    <style>      
+            * {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            .wrapper {
+                display: flex;
+                flex-direction: row;
+                min-height: 100vh;
+                height: auto;
+                width: 100vw;
+                background-color: rgb(32, 32, 32);
+                color: #bbb;
+            }
+            .sidebar {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 300px;
+                background-color: rgb(43, 40, 40);
+                height: 100%;
+                min-height: 900px;
+                position: fixed;
+                left: 0px;
+            }
+            .sidebar .logo {
+                display: flex;
+                width: 100%;
+                height: 100px;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.8rem;
+            }
+            .sidebar .logo span {
+                color: steelblue;
+            }
+            ul {
+                /* border: 1px solid red; */
+                list-style: none;
+                width: 70%;
+                margin-top: 50px;
+            }
+            ul li a {
+                display: block;
+                text-decoration: none;
+                color:rgb(116, 110, 110);
+                font-size: 1.2rem;
+                padding: 10px 5px;
+            }
+            ul li a:hover {
+                background-color: rgb(88, 84, 84);
+                color:rgb(32, 32, 32);
+                border-radius: 5px;
+            }
+            ul li a i {
+                display: inline-block;
+                width: 20px;
+                margin-right: 10px;
+                text-align: center;
+            }
+            hr {
+                display: block;
+                width: 70%;
+                height: 2px;
+                border: none;
+                background-color: rgb(77, 74, 74);
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                width: calc(100% - 320px);
+                margin-left: 320px;
+            }
+    </style>
+
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <div class="sidebar">
+            <div class="logo"><span>ntw</span>geeksville</div>
+            <hr>
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="#"><i class="fa-solid fa-person"></i>About</a></li>
+                <li><a href="#"><i class="fa-solid fa-bell-concierge"></i>Services</a></li>
+                <li><a href="#"><i class="fa-sharp fa-solid fa-file"></i>Portfolio</a></li>
+                <li><a href="#"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+                <li><a href="#"><i class="fa-solid fa-image"></i>Gallery</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="content"></div>
+
+</div>
+
+</body>
+</html>

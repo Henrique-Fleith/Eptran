@@ -14,7 +14,7 @@ body {
 
 /* Tema escuro */
 body.dark-theme {
-    background-color: #0c0c0c;
+    background-color: #222;
     color: #fff;
 }
 
