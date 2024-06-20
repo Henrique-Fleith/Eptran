@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,216 +8,273 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <title>SideBar Menu Demo</title>
 
-    <style>  
-            /*cima*/
+    <style>
+        /*cima*/
 
-            header {
-                width: 100%;
-                height: 50px;
-                background-color: #023859;
-                position: fixed;
-                display: flex;
-                justify-content: space-between;
-            }
+        header {
+            width: 100%;
+            height: 50px;
+            background-color: #023859;
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+        }
 
-            header img {
-                margin-left: 10px;
-                margin-top: 5px;
-                height: 40px;
-                width: auto;
-                filter: brightness(10);
-                cursor: pointer;
-            }
+        header img {
+            margin-left: 10px;
+            margin-top: 5px;
+            height: 40px;
+            width: auto;
+            filter: brightness(10);
+            cursor: pointer;
+        }
 
-            .pfp {
-                margin-right: 10px;
-                margin-top: 10px;
-                height: 30px;
-            }   
-            
-            footer {
-                align-self: flex-end;
-                width: 100%;
-                height: 50px;
-                text-align: center;
-                color: white;
-                background-color: #023859;
-            }
-            /*nav bar*/
-            * {
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                padding: 0;
-                margin: 0;
-                box-sizing: border-box;
-            }
-            
+        .pfp {
+            margin-right: 10px;
+            margin-top: 10px;
+            height: 30px;
+        }
+
+        footer {
+            align-self: flex-end;
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            color: white;
+            background-color: #023859;
+        }
+
+        /*nav bar*/
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #012a43;
+            height: 100%;
+            position: fixed;
+            left: 0px;
+            top: 50px;
+            transition: all 0.3s ease;
+        }
+
+
+        @media (max-width: 1080px) {
             .sidebar {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                background-color: #012a43;
-                height: 100%;
-                position: fixed;
-                left: 0px;
-                top: 50px;
-                transition: all 0.3s ease;
-            }
-
-
-            @media (max-width: 1080px) {
-                .sidebar{
                 width: 95%;
             }
-            }
+        }
 
-            @media (min-width: 1080px) {
-                .sidebar{
+        @media (min-width: 1080px) {
+            .sidebar {
                 width: 20%;
             }
-            }
-            
-            ul {
-                list-style: none;
-                width: 85%;
-                margin-top: 50px;
-            }
-            ul li a {
-                display: block;
-                margin-top: 9px;
-                text-decoration: none;
-                color:rgb(208, 208, 208);
-                font-size: 100%;
-                padding: 25px 10px;
-                padding-left: 30px;
-                white-space: nowrap;
-                transition: all 0.3s ease;
-            }
-            ul li a:hover {
-                background-color: rgb(1, 2, 47);
-                color:rgb(255, 255, 255);
-                border-radius: 5px;
-                margin-left: 4px;
-            }
-            .imgtxt {
-                display: inline-block;
-                width: 20px;
-                margin-right: 20px;
-                text-align: center;
-            }
-            hr {
-                display: block;
-                width: 70%;
-                height: 2px;
-                border: none;
-                background-color: rgb(77, 74, 74);
-            }
+        }
 
-            .ev {
-                width: 0px;
-                color: rgba(240, 248, 255, 0);
-                transition: all 0.3s ease;
-                
-            }
+        ul {
+            list-style: none;
+            width: 85%;
+            margin-top: 50px;
+        }
 
-            .ev a{
-                color: rgba(240, 248, 255, 0);
-                transition: all 0.3s ease;
-                pointer-events: none;
-            } 
-            /*o site msm*/
-            .body{
-                display: flex;
-                flex-direction: column;
-                text-align: center;
-                align-items: center;
-                margin-bottom: 120px;
-                background-color: #eaeaeab3;
-            }
+        ul li a {
+            display: block;
+            margin-top: 9px;
+            text-decoration: none;
+            color: rgb(208, 208, 208);
+            font-size: 100%;
+            padding: 25px 10px;
+            padding-left: 30px;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+        }
 
-            .body p{
-                margin-left: 20%;
-                margin-right: 20%;
-                font-size: larger;
-            }
+        ul li a:hover {
+            background-color: rgb(1, 2, 47);
+            color: rgb(255, 255, 255);
+            border-radius: 5px;
+            margin-left: 4px;
+        }
 
-            .pablohon{
-                width: 200px;
-            }
+        .imgtxt {
+            display: inline-block;
+            width: 20px;
+            margin-right: 20px;
+            text-align: center;
+        }
 
+        hr {
+            display: block;
+            width: 70%;
+            height: 2px;
+            border: none;
+            background-color: rgb(77, 74, 74);
+        }
+
+        .ev {
+            width: 0px;
+            color: rgba(240, 248, 255, 0);
+            transition: all 0.3s ease;
+
+        }
+
+        .ev a {
+            color: rgba(240, 248, 255, 0);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        /*o site msm*/
+        .body {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            margin-bottom: 120px;
+            background-color: #eaeaeab3;
+        }
+
+        .body p {
+            margin-left: 20%;
+            margin-right: 20%;
+            font-size: larger;
+        }
+
+        .pablohon {
+            width: 200px;
+        }
+
+        /* Botao de Sair */
+        .butao {
+            width: 100px;
+            align-self: flex-end;
+            margin-top: 45px;
+            position: fixed;
+        }
+
+        .invisible {
+            width: 0px;
+            transition: all 0.5s ease;
+            display: none;
+        }
 
     </style>
 
 </head>
+
 <body>
 
     <header>
-        <img src="img/Menu_icon_icon-icons.com_71858.png" alt="menu" class="barra" id="pablo">     
+        <img src="img/Menu_icon_icon-icons.com_71858.png" alt="menu" class="barra" id="pablo">
         <img src="img/Logo.png" alt="logo eptran" class="logo">
         <img src="img/lologo.png" alt="foto de perfil" class="pfp" onclick="BotaoSair()">
     </header>
 
-        <div class="sidebar ev" id="side">
-            <ul>
-                <li><a href="#"><i class="fa-solid fa-house imgtxt"></i>Home</a></li>
-                <li><a href="#"><i class="fa-solid fa-car-side imgtxt"></i>Atividades</a></li>
-                <li><a href="#"><i class="fa-solid fa-bell-concierge imgtxt"></i>Leis de trânsito</a></li>
-                <li><a href="#"><i class="fa-solid fa-envelope imgtxt"></i>contatos</a></li>
-                <li><a href="#"><i class="fa-solid fa-address-card fa-flip imgtxt"></i>Sobre nós</a></li>
-                <li><a href="#"><i class="fa-sharp fa-solid fa-file imgtxt"></i>relatorios</a></li>
-            </ul>
-        </div>
+     <a href="html/login.html" class="butao invisible">
+            <button href="html/login.html">Sair da Conta</button>
+    </a>
+  
+    <div class="sidebar ev" id="side">
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-house imgtxt"></i>Home</a></li>
+            <li><a href="#"><i class="fa-solid fa-car-side imgtxt"></i>Atividades</a></li>
+            <li><a href="#"><i class="fa-solid fa-bell-concierge imgtxt"></i>Leis de trânsito</a></li>
+            <li><a href="#"><i class="fa-solid fa-envelope imgtxt"></i>contatos</a></li>
+            <li><a href="#"><i class="fa-solid fa-address-card fa-flip imgtxt"></i>Sobre nós</a></li>
+            <li><a href="#"><i class="fa-sharp fa-solid fa-file imgtxt"></i>relatorios</a></li>
+        </ul>
+    </div>
 
 
-<div class="body">
-<br><br><br><br>
-<img src="/img/Radiohead_-_Pablo_Honey.jpg" alt="pablo" class="pablohon">
-<br><br>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente suscipit quibusdam accusamus, quod natus minus a voluptatem nemo odio, repudiandae maiores debitis non molestias hic reprehenderit ut officia ad dolores?</p>
-<br>
-<p>Ista sententia est: "Omne legenda habet heros!"
+    <div class="body">
+        <br><br><br><br>
+        <img src="/img/Radiohead_-_Pablo_Honey.jpg" alt="pablo" class="pablohon">
+        <br><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente suscipit quibusdam accusamus, quod natus
+            minus a voluptatem nemo odio, repudiandae maiores debitis non molestias hic reprehenderit ut officia ad
+            dolores?</p>
+        <br>
+        <p>Ista sententia est: "Omne legenda habet heros!"
 
-    Olim erat pulcher puer nomine Cristiano Sapela. Sapela feliciter vixit in oppido prae-Joinville nomine Lagoa de Todos os Santos. Urbs nomen accepit a sacerdote qui omnes indigenas in regione baptizavit et ecclesiam ad radices fluminis Cachoeira construxit, ubi nunc Moinho cognominatur.
-    
-    Ecclesia munere religiosae sectae fungitur. Coacti sunt homines indigenae nominibus, identitatibus et culturis renuntiare, ne secundum sacerdotem diaboli servi fierent. Parum cognoverunt daemonem esse propinquiorem quam putabant. Insidians vivebat; fuit. Quo plus dereliquisti origines, eo magis crevit. Eo perventum est ubi Reincarnation iam maior erat quam tota urbs. Unusquisque autem servus eius habebatur. Secundum rumores ad tempus, circumcirca densa, gooey, substantia flavescens in ore illorum.
-    
-    Indigenae dixerunt hunc goo sensum potentiae et mollitiae, valde bonum sensum, vel in lingua antiqua Tupi "katupyryb", orta a verbis "katu" et "pyryb", id est. proprie "optimum".
-    
-    Transeunt anni, et urbs eo morbo occupata est. Cum pandemici communes erant saeculo XIX propter defectum sanitatis, nemo multum attendit. Sed moribus aliud animadvertit. Sapela venit et animadvertit flumina alium odorem emisisse cum aestu illo tempore exiit. Usus est aestus maximo, flumen exploravit. Et ibi circumvagans civitatem vidit Reincarnationem. Creatura adeo terribilis est ut Sapela cito metu perfugiat. Commentarius in eum, qui appellatur Diarium Nautae Scaganiphobetici, scripsit:
-    
-    "Homo habebat faciem quae tibi goosebumps daret, oculi eius profunde et obscurus, sicut globulum. corpore grandior erat et comorbiditate aliqua laborare visus est."
-    
-    Haec relatio magni momenti esset, cum prima relatio scripta de homine qui in corpore suo Reincarnationem portaverat.
-<br><br>
-    Sapela non notabatur eo tempore, sed postea passurus est, vel in verbis "se periculum", pro poena omnium in eo municipio. In parva domo in occidente São Francisco se contulit, prope hodiernam Itingam, et noctu ambulavit ad Lagoa de Todos os Santos. Semper in specula, sicut diabolus necessarius, observavit et tractavit non-infectas ut ei spatium, materias concederent et, praesertim, confideremus, ut Sapela posset operari in urbis contagione exitus.
+            Olim erat pulcher puer nomine Cristiano Sapela. Sapela feliciter vixit in oppido prae-Joinville nomine Lagoa
+            de Todos os Santos. Urbs nomen accepit a sacerdote qui omnes indigenas in regione baptizavit et ecclesiam ad
+            radices fluminis Cachoeira construxit, ubi nunc Moinho cognominatur.
 
-"Egone, Sapela, fructus Machiavelliae sortis, quae me tam voracissime sequitur, ut ne unguium quidem sentiam appropinquare sentio? Odium definitionem puto esse, quam non possumus intelligere, nedum ferre. Si ita est, habeo. Oderunt vitam meam miseram et odium erga eos qui se non periclitantur pro illis quos amant et volunt tueri amabo te, soror.
+            Ecclesia munere religiosae sectae fungitur. Coacti sunt homines indigenae nominibus, identitatibus et
+            culturis renuntiare, ne secundum sacerdotem diaboli servi fierent. Parum cognoverunt daemonem esse
+            propinquiorem quam putabant. Insidians vivebat; fuit. Quo plus dereliquisti origines, eo magis crevit. Eo
+            perventum est ubi Reincarnation iam maior erat quam tota urbs. Unusquisque autem servus eius habebatur.
+            Secundum rumores ad tempus, circumcirca densa, gooey, substantia flavescens in ore illorum.
 
-Sapela ad flumen, armis instructus. Omnibus infectis habebat fiduciam, ensis iam erat contra malum incarnatum. Sapela abiit! sicut pulvis in spatio disparuit, sicut formicae in silva, sicut gutta aquae in oceano, sicut si mortalis contra ineptum, disparuit. Clamavit ad funus mater, sed quid ad rem? Ad extremum, more solito non revertit, et sic incerta finitur. Servi erant in aquilone et maxime prope ecclesiam, sed visi sunt.
+            Indigenae dixerunt hunc goo sensum potentiae et mollitiae, valde bonum sensum, vel in lingua antiqua Tupi
+            "katupyryb", orta a verbis "katu" et "pyryb", id est. proprie "optimum".
 
-2024 - Joinville
+            Transeunt anni, et urbs eo morbo occupata est. Cum pandemici communes erant saeculo XIX propter defectum
+            sanitatis, nemo multum attendit. Sed moribus aliud animadvertit. Sapela venit et animadvertit flumina alium
+            odorem emisisse cum aestu illo tempore exiit. Usus est aestus maximo, flumen exploravit. Et ibi circumvagans
+            civitatem vidit Reincarnationem. Creatura adeo terribilis est ut Sapela cito metu perfugiat. Commentarius in
+            eum, qui appellatur Diarium Nautae Scaganiphobetici, scripsit:
 
-Sapela Jr. et coetus quinque amicorum circa scholam ambulant, quaerentes aliquid facere in feria quinta post meridiem. Schola vacua, nihil agere, taedium, et illud taediosum illud, quod se iterum atque iterum repetere videtur. Sapela plumbum sumit et dicit: "Scis quid? Quomodo murum ascendimus et ad molam imus?"
+            "Homo habebat faciem quae tibi goosebumps daret, oculi eius profunde et obscurus, sicut globulum. corpore
+            grandior erat et comorbiditate aliqua laborare visus est."
 
-Reliqua autem historia est.
-</p>
+            Haec relatio magni momenti esset, cum prima relatio scripta de homine qui in corpore suo Reincarnationem
+            portaverat.
+            <br><br>
+            Sapela non notabatur eo tempore, sed postea passurus est, vel in verbis "se periculum", pro poena omnium in
+            eo municipio. In parva domo in occidente São Francisco se contulit, prope hodiernam Itingam, et noctu
+            ambulavit ad Lagoa de Todos os Santos. Semper in specula, sicut diabolus necessarius, observavit et
+            tractavit non-infectas ut ei spatium, materias concederent et, praesertim, confideremus, ut Sapela posset
+            operari in urbis contagione exitus.
+
+            "Egone, Sapela, fructus Machiavelliae sortis, quae me tam voracissime sequitur, ut ne unguium quidem sentiam
+            appropinquare sentio? Odium definitionem puto esse, quam non possumus intelligere, nedum ferre. Si ita est,
+            habeo. Oderunt vitam meam miseram et odium erga eos qui se non periclitantur pro illis quos amant et volunt
+            tueri amabo te, soror.
+
+            Sapela ad flumen, armis instructus. Omnibus infectis habebat fiduciam, ensis iam erat contra malum
+            incarnatum. Sapela abiit! sicut pulvis in spatio disparuit, sicut formicae in silva, sicut gutta aquae in
+            oceano, sicut si mortalis contra ineptum, disparuit. Clamavit ad funus mater, sed quid ad rem? Ad extremum,
+            more solito non revertit, et sic incerta finitur. Servi erant in aquilone et maxime prope ecclesiam, sed
+            visi sunt.
+
+            2024 - Joinville
+
+            Sapela Jr. et coetus quinque amicorum circa scholam ambulant, quaerentes aliquid facere in feria quinta post
+            meridiem. Schola vacua, nihil agere, taedium, et illud taediosum illud, quod se iterum atque iterum repetere
+            videtur. Sapela plumbum sumit et dicit: "Scis quid? Quomodo murum ascendimus et ad molam imus?"
+
+            Reliqua autem historia est.
+        </p>
 
 
-</div>
+    </div>
 
 
-<footer> 
-    <p>Eptran©</p>
-</footer>
+    <footer>
+        <p>Eptran©</p>
+    </footer>
 
-<script>
+    <script>
         var btn = document.getElementById('pablo')
         var side = document.getElementById('side')
 
         btn.addEventListener('click', () => {
-          side.classList.toggle('ev');
-          btn.classList.add('fa-flip');
+            side.classList.toggle('ev');
+            btn.classList.add('fa-flip');
         });
 
-</script>
+        function BotaoSair() {
+            document.querySelector(".butao").classList.toggle("invisible");
+        }
+
+    </script>
 </body>
+
 </html>
