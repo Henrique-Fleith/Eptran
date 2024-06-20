@@ -3,34 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="template.css"> 
+    <link rel="shortcut icon" href="img/Logo.png">
     <title> Eptran </title>
 </head>
 
 <body>
-    
     <header>
-
-        <img src="img/logo.png" alt="logo eptran" class="logo">
-        <button onclick="abrefecha()"> teste</button>
-        <img src="img/lologo.png" alt="foto de perfil" class="pfp">
-
+        <img src="img/Menu_icon_icon-icons.com_71858.png" alt="menu" class="barra" id="Barra">     
+        <img src="img/Logo.png" alt="logo eptran" class="logo">
+        <img src="img/lologo.png" alt="foto de perfil" class="pfp" onclick="BotaoSair()">
     </header>
+    
+    <a href="html/login.html" class="butao invisible">
+        <button href="html/login.html">Sair da Conta</button>
+    </a>
 
-    <nav id="navbar"class="invisible"></nav>
-
-    <main>
+    <nav class="bar nav" id="Bar">
+        <img src="/img/luz.png" onclick="alternarTema()" style="width: 10%; margin-left: 4%; filter: invert(100%);" class="nav-item"><br><br>
+        <img src="img/Radiohead_-_Pablo_Honey.jpg" alt="" style="width: 40%; margin-left: 4%;" class="pablofudido">
         
-        <h1>Home</h1>
+    </nav>
 
-    </main>
+    <main><h1>Home</h1> </main>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     <footer> 
-
-        <p> Eptran </p>
+        <p>Eptran©</p>
     </footer>
 
-    <script src="/JavaScript/template.js"></script>
+    <script>
+        const barra = document.querySelector('#Barra');
+        const bar = document.querySelector('#Bar');
 
+        document.querySelector(".nav-item").classList.toggle("invisible");
+
+        barra.addEventListener('click', () => {
+          bar.classList.toggle('ativo');
+          document.querySelector(".nav-item").classList.toggle("invisible");
+        });
+    
+        function BotaoSair() {
+            document.querySelector(".butao").classList.toggle("invisible");
+        }
+
+        function alternarTema() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
 </body>
 </html>
