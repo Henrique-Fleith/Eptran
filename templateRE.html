@@ -9,6 +9,7 @@
     <title>SideBar Menu Demo</title>
 
     <style>
+ 
         /*cima*/
 
         header {
@@ -38,7 +39,7 @@
         footer {
             align-self: flex-end;
             width: 100%;
-            height: 50px;
+            height: 60px;
             text-align: center;
             color: white;
             background-color: #023859;
@@ -131,14 +132,19 @@
         }
 
         /*o site msm*/
-        .body {
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0px;
+            margin: 0px;
             display: flex;
             flex-direction: column;
+            height: 100vh;
+            background-color: #eaeaeab3;
+            color: #000;
             text-align: center;
             align-items: center;
-            margin-bottom: 120px;
-            background-color: #eaeaeab3;
         }
+
 
         .body p {
             margin-left: 20%;
@@ -163,7 +169,6 @@
             transition: all 0.5s ease;
             display: none;
         }
-
     </style>
 
 </head>
@@ -176,10 +181,10 @@
         <img src="img/lologo.png" alt="foto de perfil" class="pfp" onclick="BotaoSair()">
     </header>
 
-     <a href="html/login.html" class="butao invisible">
-            <button href="html/login.html">Sair da Conta</button>
+    <a href="html/login.html" class="butao invisible">
+        <button href="html/login.html">Sair da Conta</button>
     </a>
-  
+
     <div class="sidebar ev" id="side">
         <ul>
             <li><a href="#"><i class="fa-solid fa-house imgtxt"></i>Home</a></li>
