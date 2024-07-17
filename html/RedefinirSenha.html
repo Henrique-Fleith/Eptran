@@ -5,24 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redefinir senha</title>
     <link rel="stylesheet" href="Style Inicio.css">
-    
 </head>
 <body>
 
     <div class="container">
         <h1 class="title">Coloque Seu Email</h1>
+        
+        <!-- Formulário para enviar email para redefinir senha -->
         <form action="enviar.php" method="post" class="input-group">
 
+            <!-- Campo de entrada para email -->
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
 
-            <a href="#" class="input-group"></a>
-        <button type="submit">Confirmar</button><br><br>
-            
+            <!-- Botão para enviar o formulário -->
+            <button type="submit">Confirmar</button><br><br>
         </form>
         
+        <!-- Link para voltar para a página de login -->
         <a href="login.html" class="input-group">
-            <button>voltar</button></a>
+            <button>Voltar</button>
+        </a>
+    </div>
 
 </body>
 </html>
